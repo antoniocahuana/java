@@ -1,0 +1,26 @@
+class Main {
+  public static void main(String[] args) {
+    int [] arrangement = { 8, 2, 5, 6, 3, 9};
+    int n1 = 0;
+    int n2 = 0;
+    boolean numfind = false;
+
+    for(int a = 0; a < arrangement.length; a++){
+      for (int b = a +1; b < arrangement.length; b++) {
+        if (arrangement[a] + arrangement[b] == 10) {
+          n1 = arrangement[a];
+          n2 = arrangement[b];
+          numfind = true;
+          break;
+        }
+      }
+      if (numfind) {
+        System.out.println(n1+" "+n2);
+        break;
+      }
+      else {
+        System.out.println("no numbers found");
+      }
+    }
+  }
+}
